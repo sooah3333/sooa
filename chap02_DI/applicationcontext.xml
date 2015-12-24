@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="messageBean" class="sample3.applicationcontext.MessageBeanImpl"
+			init-method="init">
+		<constructor-arg value="Spring"/>
+		
+		<property name="greeting">
+			<value>Hello, </value>
+		</property>
+	</bean>
+	
+	<bean class="sample3.applicationcontext.CustomBeanPostProcessor"></bean>
+
+</beans>
